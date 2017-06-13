@@ -1,0 +1,13 @@
+provider "dnsimple" {
+  token = "abcd1234"
+  account = "nope"
+}
+
+resource = "dnsimple_record" "foobar" {
+  domain = "foobar.com"
+  type = "A"
+  name = "foobar"
+  value = "${aws_instance.web.0.public_ip}"
+#  value = "${element(aws_instance.web.*.public_ip, 0)}"
+#  value = "${element(aws_instance.web.*.public_ip, count.index)}"
+}

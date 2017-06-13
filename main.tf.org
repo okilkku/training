@@ -1,0 +1,29 @@
+#
+# DO NOT DELETE THESE LINES!
+#
+# Your AMI ID is:
+#
+#     ami-a4f9f2c2
+#
+# Your subnet ID is:
+#
+#     subnet-7aba681d
+#
+# Your security group ID is:
+#
+#     sg-00100979
+#
+# Your Identity is:
+#
+#     hdays-michel-mockingbird
+#
+
+provider "aws" {
+  access_key = "AKIAINPI4X3XB3O6YCFQ"
+  secret_key = "ISGgZGJwi/VQpDnOSAc4Jk2wRK4ennGxBa6GjIna"
+  region     = "eu-west-1"
+}
+
+resource "aws_instance" "web" {
+  # ...
+}
